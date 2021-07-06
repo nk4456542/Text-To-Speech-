@@ -22,10 +22,10 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     fun speak(v: View?){
         var e = findViewById<View>(R.id.txt) as EditText
         var txt = e.text.toString()
-        tts!!.speak(txt,TextToSpeech.QUEUE_FLUSH,null,"")
+        tts?.speak(txt,TextToSpeech.QUEUE_FLUSH,null,"")
     }
 
     override fun onInit(status: Int) {
-        tts!!.setLanguage(Locale.ENGLISH)
+        tts?.setLanguage(Locale.ENGLISH)
     }
 } 
